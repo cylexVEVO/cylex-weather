@@ -36,14 +36,14 @@ export default async function Page({ searchParams: { lat, lon } }: { searchParam
   return (
     <main className="bg-gradient-to-b from-[#3F7AB0] to-[#16293C] h-[100dvh] flex flex-col justify-between">
       <section aria-label="current weather">
-        <div aria-hidden="true" className="text-[15px] flex items-center gap-2 pt-4 px-4 lg:pt-20 lg:px-20 mb-4 text-white justify-center md:justify-normal">
+        <div aria-hidden="true" className="text-[15px] flex items-center gap-2 pt-4 px-4 lg:pt-20 lg:px-20 mb-4 text-white">
           <img src="/location.svg" />
           <span className="opacity-75">
             {lat}, {lon}
           </span>
         </div>
-        <div className="flex flex-col md:flex-row gap-6 md:gap-0 items-center md:justify-between p-4 lg:p-20 pt-0 lg:pt-0">
-          <div className="text-5xl font-bold text-white flex items-center gap-9">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-0 md:justify-between p-4 lg:p-20 pt-0 lg:pt-0">
+          <div className="text-5xl font-bold text-white flex items-center gap-4 md:gap-9">
             <img aria-hidden="true" src="/cloud.svg" />
             <h1>
               {data && cToF(data.properties.timeseries[0].data.instant.details?.air_temperature ?? 0)}°
