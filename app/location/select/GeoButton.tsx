@@ -13,7 +13,7 @@ export function GeoButton() {
                 }, (e) => {
                     console.error(e);
                     alert("Failed to get current location. Please manually enter your location.");
-                }, { enableHighAccuracy: true });
+                });
             } else {
                 alert("Your browser does not support supplying websites with geolocation data.");
             }
