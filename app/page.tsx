@@ -122,7 +122,7 @@ export default async function Page({ searchParams: { lat, lon } }: { searchParam
       </section>
       <section aria-label="forecasts" className="p-4 lg:p-20 !pt-0 grid">
         <h1 className="text-[15px] font-semibold text-white opacity-75 mb-1">
-          Today's Forecast
+          Today&apos;s Forecast
         </h1>
         <ForecastContainer currentIdx={data?.properties.timeseries.indexOf(current!) ?? 0}>
           {data?.properties.timeseries.filter((entry) => {
