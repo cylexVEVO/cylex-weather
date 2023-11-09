@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 import { ForecastContainer } from "./ForecastContainer";
+import { HyrdateBodyBg } from "./HydrateBodyBg";
 
 export type MetNoData = {
   properties: {
@@ -13,6 +14,11 @@ export type MetNoData = {
           }
         },
         next_1_hours?: {
+          summary?: {
+            symbol_code?: string
+          }
+        },
+        next_12_hours?: {
           summary?: {
             symbol_code?: string
           }
@@ -85,6 +91,7 @@ export default async function Page({ searchParams: { lat, lon } }: { searchParam
 
   return (
     <main className="relative flex flex-col">
+      <HyrdateBodyBg topColor="#3F7AB0" />
       <div aria-hidden="true" className="bg-gradient-to-b from-[#3F7AB0] to-[#16293C] fixed inset-0 -z-10" />
       <section aria-label="current weather">
         <div aria-hidden="true" className="text-[15px] flex items-center gap-2 pt-4 px-4 lg:pt-20 lg:px-20 mb-4 text-white">
